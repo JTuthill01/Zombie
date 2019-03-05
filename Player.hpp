@@ -15,18 +15,25 @@ public:
 
 	inline sf::FloatRect getGobalBounds()const { return this->mPlayerSprite.getGlobalBounds(); }
 	inline sf::Vector2f getPosition() const { return this->mPlayerSprite.getPosition(); }
+	inline void setPosition(sf::Vector2f position) { this->mPlayerSprite.setPosition(position); }
 
 	bool IsAttacking() const { return mIsAttacking; }
+	bool isLoadLevel() { return this->mLoadLevel;}
+	void setLoadLevel(bool TF) { this->mLoadLevel = TF; }
 
-protected:
 	MovementComponent* pMovementComponent;
 	AnimationComponent* pAnimationComponent;
+
+protected:
+	
 
 	float pMovementSpeed;
 
 private:
 	sf::Texture mPlayerTexture;
 	sf::Sprite mPlayerSprite;
+
+	bool mLoadLevel;
 
 	void initTextures();
 	void updateAttack();
@@ -36,6 +43,4 @@ private:
 
 	bool mIsContact;
 	bool mIsAttacking;
-
 };
-

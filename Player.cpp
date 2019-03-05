@@ -52,7 +52,6 @@ void Player::updateAnimations(const float & deltaTime)
 			if (this->mPlayerSprite.getScale().x > 0.f) //Facing left
 				this->mPlayerSprite.setOrigin(0.f, 0.f);
 
-
 			else //Facing right
 				this->mPlayerSprite.setOrigin(258.f, 0.f);
 		}
@@ -60,7 +59,6 @@ void Player::updateAnimations(const float & deltaTime)
 
 	if (this->pMovementComponent->getState(IDLE))
 		this->pAnimationComponent->play("IDLE", deltaTime);
-
 
 	else	if (this->pMovementComponent->getState(MOVING_RIGHT))
 	{
@@ -74,7 +72,6 @@ void Player::updateAnimations(const float & deltaTime)
 			this->pMovementComponent->getVelocity().x,
 			this->pMovementComponent->getMaxVelocity());
 	}
-
 
 	else if (this->pMovementComponent->getState(MOVING_LEFT))
 	{

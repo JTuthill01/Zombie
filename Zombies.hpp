@@ -1,7 +1,6 @@
 #pragma once
 #include "Level.hpp"
 
-
 namespace Level
 {
 	class Zombies :
@@ -17,13 +16,11 @@ namespace Level
 		virtual void initTextures() override;
 		virtual void update(const float & deltaTime) override;
 
-		
-
 	private:
 		Player mPlayer;
+		bool mPlayerPosition;
 
 		sf::Texture mLevelTexture;
 		sf::Sprite mLevelSprite;
 	};
 }
-

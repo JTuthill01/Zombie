@@ -3,18 +3,17 @@
 
 namespace Level
 {
-	Zombies::Zombies() : Level(pWindow, pLevel)
+	Zombies::Zombies() : Level(pWindow, pLevel), mPlayerPosition(false)
 	{
 	}
 
-	Zombies::Zombies(sf::RenderWindow* window, std::stack<Level*>* level) : Level(window, level)
+	Zombies::Zombies(sf::RenderWindow* window, std::stack<Level*>* level) : Level(window, level), mPlayerPosition(false)
 	{
 		this->initTextures();
 	}
 
 	Zombies::~Zombies()
 	{
-		
 	}
 
 	void Zombies::render(sf::RenderTarget * target)
@@ -35,6 +34,11 @@ namespace Level
 	{
 		this->mPlayer.update(deltaTime);
 
-		std::cout << deltaTime << "\n";
+		if (mPlayerPosition == false)
+		{
+			this->mPlayer.setPosition(sf::Vector2f(0, 750));
+			//this->mPlayer.setLoadLevel(false);
+			mPlayerPosition = true;
+		}
 	}
 }
