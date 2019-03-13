@@ -1,6 +1,7 @@
 #pragma once
 #include "Level.hpp"
 #include "Zombies.hpp"
+#include "TextTags.hpp"
 
 namespace Level
 {
@@ -23,8 +24,6 @@ namespace Level
 		inline sf::FloatRect getGobalBounds()const { return this->mOrcSprite.getGlobalBounds(); }
 		inline sf::Vector2f getPosition() const { return this->mOrcSprite.getPosition(); }
 
-		bool IsAttacking() const { return mIsAttacking; }
-
 	protected:
 		MovementComponent* pMovementComponent;
 		AnimationComponent* pAnimationComponent;
@@ -38,13 +37,22 @@ namespace Level
 		sf::Texture mLeveltexture;
 		sf::Sprite mLevelSprite;
 
-		void updateAttack();
+		sf::Font mFont;
+		
 		void createMovementComponent(const float max_velocity,
 			const float acceleration, const float deceleration);
 		void createAnimationComponent(sf::Texture& texture_sheet);
-
-		bool mIsContact;
+		
 		bool mIsAttacking;
+		bool mIsWalking;
 
+		// Inherited via Level
+		virtual void updatePlayerInput(const float & deltaTime) override;
+
+		Player mPlayer;
+
+		// Inherited via Level
+		virtual bool collision(const float & deltaTime) override;
+		virtual void attack(const float & deltaTime) override;
 	};
 }

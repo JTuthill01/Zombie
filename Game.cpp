@@ -1,7 +1,7 @@
 #include "stdafx.hpp"
 #include "Game.hpp"
 
-Game::Game() : isClosed(false)
+Game::Game() : isClosed(false), mDeltaTime(0.F)
 {
 	this->initWindow();
 	this->initStates();
@@ -69,4 +69,3 @@ void Game::events()
 			this->mWindow->close();
 	}
 }
-

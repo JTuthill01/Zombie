@@ -1,9 +1,11 @@
 #pragma once
 
+enum ButtonColor { IDLE_COLOR = 0, HOVER_COLOR, ACTIVE_COLOR };
+
 class Button
 {
 public:
-	Button(sf::Vector2f position, float width, float height, sf::Font* font, std::string text, 
+	Button(sf::Vector2f position, float width, float height, sf::Font* font, std::string text,
 		unsigned character_size, sf::Color buttonColor, sf::Color textColor);
 	~Button();
 
@@ -24,4 +26,3 @@ private:
 
 	unsigned short mButtonState;
 };
-

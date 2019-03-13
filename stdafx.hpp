@@ -16,3 +16,5 @@
 #include <Thor/Math.hpp>
 
 #include "Player.hpp"
+#include "GameState.hpp"
+#include "Zombies.hpp"

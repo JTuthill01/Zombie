@@ -1,12 +1,11 @@
 #include "stdafx.hpp"
 #include "MovementComponent.hpp"
 
-MovementComponent::MovementComponent(sf::Sprite& sprite, float max_velocity, 
-		float acceleration, float deceleration) :
-			mSprite(sprite), mMax_Velocity(max_velocity), mAcceleration(acceleration),
-				mDeceleration(deceleration)
+MovementComponent::MovementComponent(sf::Sprite& sprite, float max_velocity,
+	float acceleration, float deceleration) :
+	mSprite(sprite), mMax_Velocity(max_velocity), mAcceleration(acceleration),
+	mDeceleration(deceleration)
 {
-	
 }
 
 MovementComponent::~MovementComponent()
@@ -47,7 +46,7 @@ void MovementComponent::update(const float & deltaTime)
 
 	else if (this->mVelocity.x < 0.f)
 	{
-		//Max Velocity check x negative 
+		//Max Velocity check x negative
 		if (this->mVelocity.x < -this->mMax_Velocity)
 			this->mVelocity.x = -this->mMax_Velocity;
 
@@ -71,7 +70,7 @@ void MovementComponent::update(const float & deltaTime)
 
 	else if (this->mVelocity.y < 0.f)
 	{
-		//Max Velocity check y negative 
+		//Max Velocity check y negative
 		if (this->mVelocity.y < -this->mMax_Velocity)
 			this->mVelocity.y = -this->mMax_Velocity;
 
@@ -88,7 +87,6 @@ const bool MovementComponent::getState(const short unsigned state) const
 {
 	switch (state)
 	{
-
 	case IDLE:
 		if (this->mVelocity.x == 0.f && this->mVelocity.y == 0.f)
 			return true;
@@ -129,4 +127,3 @@ const bool MovementComponent::getState(const short unsigned state) const
 
 	return false;
 }
-

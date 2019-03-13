@@ -18,14 +18,12 @@ public:
 	inline void setPosition(sf::Vector2f position) { this->mPlayerSprite.setPosition(position); }
 
 	bool IsAttacking() const { return mIsAttacking; }
-	bool isLoadLevel() { return this->mLoadLevel;}
+	bool isLoadLevel() { return this->mLoadLevel; }
 	void setLoadLevel(bool TF) { this->mLoadLevel = TF; }
 
+protected:
 	MovementComponent* pMovementComponent;
 	AnimationComponent* pAnimationComponent;
-
-protected:
-	
 
 	float pMovementSpeed;
 

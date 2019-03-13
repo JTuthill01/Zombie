@@ -8,7 +8,7 @@ public:
 	virtual void updateMousePositions();
 	virtual void update(const float& deltaTime) = 0;
 	virtual void render(sf::RenderTarget* target = nullptr) = 0;
-	
+
 protected:
 	sf::RenderWindow* pWindow;
 	sf::Vector2i pMousePositionScreen;
@@ -19,4 +19,3 @@ protected:
 
 	bool pQuit;
 };
-

@@ -16,6 +16,9 @@
     <Filter Include="Level">
       <UniqueIdentifier>{f3289085-e47a-4099-a7ab-846b7d84fe40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{6c398389-0e7e-41cf-8aa0-f7455ecb3acc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -30,13 +33,7 @@
     <ClCompile Include="States.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
@@ -57,6 +54,18 @@
     <ClCompile Include="Zombies.cpp">
       <Filter>Level</Filter>
     </ClCompile>
+    <ClCompile Include="TextTags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EvilKnights.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.hpp">
@@ -68,13 +77,7 @@
     <ClInclude Include="States.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenu.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameState.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.hpp">
@@ -94,6 +97,18 @@
     </ClInclude>
     <ClInclude Include="Zombies.hpp">
       <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="TextTags.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EvilKnights.hpp">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.hpp">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.hpp">
+      <Filter>GUI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

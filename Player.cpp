@@ -1,7 +1,7 @@
 #include "stdafx.hpp"
 #include "Player.hpp"
 
-Player::Player() : mIsAttacking(false)
+Player::Player() : mIsAttacking(false), mLoadLevel(false)
 {
 	this->initTextures();
 

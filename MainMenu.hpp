@@ -15,8 +15,6 @@ public:
 	virtual void update(const float & deltaTime) override;
 	virtual void render(sf::RenderTarget * target = nullptr) override;
 
-	
-
 private:
 	void initTextures();
 	void initFonts();
@@ -29,6 +27,4 @@ private:
 	sf::Event e;
 
 	std::map<std::string, Button*> mButton;
-	
 };
-

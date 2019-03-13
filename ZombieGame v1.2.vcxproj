@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="AnimationComponent.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="EvilKnights.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Level.cpp" />
@@ -137,11 +138,13 @@
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TextTags.cpp" />
     <ClCompile Include="Zombies.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationComponent.hpp" />
     <ClInclude Include="Button.hpp" />
+    <ClInclude Include="EvilKnights.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameState.hpp" />
     <ClInclude Include="Level.hpp" />
@@ -151,6 +154,7 @@
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="States.hpp" />
     <ClInclude Include="stdafx.hpp" />
+    <ClInclude Include="TextTags.hpp" />
     <ClInclude Include="Zombies.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

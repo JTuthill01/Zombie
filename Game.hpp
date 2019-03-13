@@ -31,4 +31,3 @@ private:
 	MainMenu m;
 	Level::Orc o;
 };
-

@@ -1,6 +1,6 @@
 #pragma once
 
-enum movement_states{ IDLE = 0, MOVING, MOVING_LEFT, MOVING_RIGHT, MOVING_UP, MOVING_DOWN, ATTACK  };
+enum movement_states { IDLE = 0, MOVING, MOVING_LEFT, MOVING_RIGHT, MOVING_UP, MOVING_DOWN, ATTACK };
 
 class MovementComponent
 {
@@ -12,7 +12,7 @@ public:
 	const sf::Vector2f getVelocity() const;
 
 	//Accessors
-	const float& getMaxVelocity() const; 
+	const float& getMaxVelocity() const;
 
 	void move(const float x, const float y, const float& deltaTime);
 	void update(const float& deltaTime);
@@ -30,4 +30,3 @@ private:
 	sf::Vector2f mVelocity;
 	sf::Sprite& mSprite;
 };
-

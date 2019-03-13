@@ -62,5 +62,3 @@ void MainMenu::renderButtons(sf::RenderTarget* target)
 	for (auto &it : this->mButton)
 		it.second->render(*target);
 }
-
-

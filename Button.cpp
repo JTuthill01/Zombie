@@ -1,9 +1,9 @@
 #include "stdafx.hpp"
 #include "Button.hpp"
 
-Button::Button(sf::Vector2f position, float width, float height, sf::Font* font, std::string text, 
-	unsigned character_size, sf::Color buttonColor, sf::Color textColor) : mPosition(position), mWidth(width), mHeight(height), 
-		mFont(font), mButtonColor(buttonColor), mTextColor(textColor)
+Button::Button(sf::Vector2f position, float width, float height, sf::Font* font, std::string text,
+	unsigned character_size, sf::Color buttonColor, sf::Color textColor) : mPosition(position), mWidth(width), mHeight(height),
+	mFont(font), mButtonColor(buttonColor), mTextColor(textColor)
 {
 	this->mShape.setFillColor(buttonColor);
 	this->mShape.setSize(sf::Vector2f(width, height));
@@ -35,6 +35,6 @@ const bool Button::isPressed(const sf::Vector2f mousePosition) const
 {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && this->mShape.getGlobalBounds().contains(mousePosition))
 		return true;
-	
+
 	return false;
 }
